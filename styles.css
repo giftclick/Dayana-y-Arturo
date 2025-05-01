@@ -12,7 +12,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   background-color: #fdf6f0;
-  width: 440px;
+  /*! width: 440px; */
   margin: auto;
 }
 
@@ -24,7 +24,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   background: url('./assets/perla.png') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   z-index: 1000;
   pointer-events: none; /* para permitir clics en contenido */
   box-shadow: 21px 62px 23px rgba(0, 0, 0, 0.3); /* sombra al marco */
@@ -39,7 +39,8 @@ body, html {
   margin: 0 auto;
   z-index: 1;
   padding: 39px;
-  margin-top: 120px;
+  margin-top: 55px;
+  margin-bottom: 150px;
 }
 
 /* Secciones internas */
@@ -52,7 +53,7 @@ body, html {
 .title {
   font-family: 'Herr Von Muellerhoff', cursive;
   font-size: 64px;
-  color: #5d3a00;
+  color: #b8780e;
   margin-bottom: 10px;
 }
 
@@ -73,7 +74,7 @@ body, html {
 
 .decorative-rose {
   display: block;
-  margin: 0 auto 0px auto;
+  margin: -10px auto -30px auto;
   width: 200px;
   height: auto;
 }
@@ -99,7 +100,7 @@ body, html {
 
   .subtitle {
     font-size: 20px;
-    margin-inline: 60px;
+    margin-inline: 40px;
   }
 
   .text {

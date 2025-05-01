@@ -1,0 +1,99 @@
+/* Fuentes y Reset */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: #fdf6f0;
+  width: 440px;
+  margin: auto;
+}
+
+/* Marco fijo PNG */
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/perla.png') no-repeat center center;
+  background-size: contain;
+  z-index: 1000;
+  pointer-events: none; /* para permitir clics en contenido */
+  box-shadow: 21px 62px 23px rgba(0, 0, 0, 0.3); /* sombra al marco */
+  filter: drop-shadow(0px 6px 35px #00000096);
+}
+
+/* Contenido Scrollable detrás del marco */
+.content {
+  position: relative;
+  padding: 100px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 39px;
+  margin-top: 120px;
+}
+
+/* Secciones internas */
+.section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Títulos */
+.title {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 64px;
+  color: #5d3a00;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #7a4e10;
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #493212;
+  font-family: 'roboto', sans-serif;
+  font-weight: 200;
+}
+
+.decorative-rose {
+  display: block;
+  margin: 0 auto 0px auto;
+  width: 200px;
+  height: auto;
+}
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+    margin-top: 15px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-inline: 60px;
+  }
+
+  .text {
+    font-size: 16px;
+    font-family: 'roboto', sans-serif;
+    margin-inline: 60px;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestra Boda Dayana y Arturo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel&family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet" />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dayana y Arturo">
+    <meta property="og:description" content="¡Te invitamos a celebrar con nosotros!">
+    <meta property="og:image" content="ring.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giftclick.github.io/Dayana-y-Arturo/">
+</head>
+
+<body>
+    <!-- Marco Fijo -->
+    <div class="frame"></div>
+
+    <!-- Contenido Scrollable -->
+    <div class="content">
+        <section class="section">
+            <h1 class="title">Dayana y Arturo</h1>
+            <p class="subtitle">¡Nos casamos!</p>
+            <p class="subtitle">TU PRESENCIA ES ALTAMENTE APRECIADA EN ESTE MOMENTO TAN ESPECIAL.</p>
+            <img src="./assets/rosa1.png" alt="Rosa decorativa" class="decorative-rose" />
+            <div id="countdown" class="subtitle"></div>
+
+        </section>
+        <section class="section">
+            <p class="text">La ceremonia se llevará a cabo el sábado 19 de julio de 2025 a las 16:00 en Basílica Nuestra
+                Señora de la Merced, Jirón de la Unión 621</p>
+        </section>
+        <section class="section">
+            <h1 class="title">Recepción</h1>
+            <p class="subtitle">07:00PM</p>
+            <p class="text">Hacienda Loayza, Mz. "C", Lt. 47, Urb. Mutual Ayacucho, Km. 18, Panamericana Sur, Chorrillos.</p>
+        </section>
+        <section class="section">
+            <p class="text">Confirma tu asistencia antes del 1 de septiembre.</p>
+        </section>
+    </div>
+</body>
+<script>
+    function updateCountdown() {
+        const targetDate = new Date("july 19, 2025 16:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference <= 0) {
+            document.getElementById("countdown").innerHTML = "¡Ya comenzó la celebración!";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            `${days} días ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(); // Ejecuta al cargar
+    setInterval(updateCountdown, 1000); // Actualiza cada segundo
+</script>
+
+</html>

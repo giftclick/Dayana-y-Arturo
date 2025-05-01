@@ -78,6 +78,17 @@ body, html {
   height: auto;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #938885;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 10%, 10% 10%, 10% 90%, 90% 90%, 90% 5%, 0 5%);
+  pointer-events: none;
+}
+
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {

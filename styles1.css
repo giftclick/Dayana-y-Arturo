@@ -312,7 +312,7 @@ b2 {
     font-weight: 200;
     color: #ffdac8;
     position: absolute;
-    background-color: #00000038;
+    background-color: #00000069;
     top: 0;
     left: 0;
     right: 0;
@@ -549,12 +549,6 @@ g[id^="BudGroup"] g[id^="BudGroup"] g[id^="Bud"],
     to {
         stroke-dashoffset: 0;
     }
-}
-
-p {
-    color: #c76234;
-    margin-top: 0px;
-    margin-bottom: 10px;
 }
 
 a {

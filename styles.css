@@ -12,6 +12,7 @@ p[href^="tel"] {
   cursor: default;
   text-decoration: none;
   color: inherit;
+  background-color: white;
 }
 
 body,

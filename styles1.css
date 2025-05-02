@@ -13,6 +13,7 @@ body {
     font-family: "Cinzel", serif;
     width: 100%;
     height: 100vh;
+    color: #8b1515;
     /* Asegura que el cuerpo ocupe toda la altura de la ventana */
 }
 
@@ -24,6 +25,12 @@ body {
     width: 300px;
     /*! padding: 30%; */
 }
+
+.fl1 {
+    text-align: center;
+    margin-bottom: 2px;
+}
+
 
 #svggiftclick {
     width: 200px;
@@ -43,15 +50,26 @@ body {
 
 footer {
     text-align: center;
-    background-color: #fbf0e5;
-    height: 150px;
+    background-color: #8b1515;
+    height: 370px;
     width: 100%;
     position: relative;
-    margin-top: 160px;
+    margin-top: 124px;
+    /*! margin-bottom: 80px; */
+    color: white;
+    padding-top: 30px;
 }
 
 footer div p {
     margin-left: 50px;
+}
+
+footer div span {
+    margin-left: 3px;
+}
+
+#ron {
+    margin-top: 25px;
 }
 
 footer>p {
@@ -61,14 +79,23 @@ footer>p {
 .footergitfclick {
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
 
-.fl1 {
+.footnumber {
+    padding-bottom: 45px;
+    margin-top: -10px;
+}
+
+#ron {
     text-align: center;
-    margin-bottom: 2px;
+    color: white;
+    margin-bottom: -172px;
+    z-index: 2;
+    position: relative;
 }
 
 #envb {
@@ -167,7 +194,7 @@ b2 {
     background-image: linear-gradient(90deg,
             rgba(203, 152, 36, 1) 0%,
             rgba(206, 119, 74) 50%,
-            rgba(193, 81, 35) 100%);
+            rgb(139, 33, 14) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     padding-inline: 15px;
@@ -390,7 +417,7 @@ b2 {
     font-style: normal;
     font-size: 55px;
     rotate: -15deg;
-    color: #ce7b15;
+    color: #b8780e;
     z-index: 2;
     overflow: hidden;
 }
@@ -533,7 +560,7 @@ p {
 a {
     text-decoration: none;
     color: white;
-    background-color: #c76234;
+    background-color: #8b1515;
     /*! width: 300px; */
     border-radius: 15px;
     /*! height: 25px; */
@@ -1111,11 +1138,6 @@ a {
 }
 
 @media (max-width: 398px) {
-    #svggiftclick {
-        margin-bottom: 0px;
-        margin-left: 1%;
-        margin-top: -20px;
-    }
 
     footer {
         height: 170px;
@@ -1125,15 +1147,6 @@ a {
     footer div p {
         margin-left: 0px;
         text-align: center;
-    }
-
-    .footnumber {
-        margin: -25px;
-    }
-
-    .footergitfclick {
-        display: flex;
-        flex-direction: column;
     }
 
     .carta img {

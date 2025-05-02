@@ -15,6 +15,21 @@ a[href^="tel"] {
   background-color: rgba(255, 255, 255, 0);
 }
 
+#Footer_group_1_,
+[id^="PinkFlowerGroup"],
+[id^="BaseGroup"] path,
+[id^="LeafGroup"] path,
+path[id^="Stroke"],
+g[id^="BudGroup"] g[id^="BudGroup"] g[id^="Bud"],
+#Bud8_1_,
+#Bud10_1_,
+#Bud23_1_,
+#Bud26_1_,
+[id^="Dots"],
+[id^="Flourish"] {
+    visibility: hidden;
+}
+
 body,
 html {
   height: 100%;
@@ -210,7 +225,7 @@ html {
 a {
   text-decoration: none;
   color: white;
-  background-color: #8b1515;
+  background-color: #8b1515; 
   border-radius: 15px;
   padding: 10px 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);

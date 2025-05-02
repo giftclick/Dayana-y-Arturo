@@ -22,6 +22,43 @@
 </head>
 
 <body>
+    <style>
+        /* Ocultar el contenido principal al cargar */
+        #content {
+            display: none;
+        }
+
+        /* Estilo del contenedor del loader */
+        #loader {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            /* Cambia el color si es necesario */
+            z-index: 9999;
+        }
+
+        .loader1 {
+            margin-top: -120px;
+        }
+    </style>
+    <div id="loader">
+        <div>
+            <h1 class="title">Dayana y Arturo</h1>
+        </div>
+        <div class="loader1">
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+            <dotlottie-player src="https://lottie.host/cb27c642-1c0f-454d-b13d-a72b53611f23/1NEYAIKha0.lottie"
+                background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+        </div>
+    </div>
     <!-- Marco Fijo -->
     <div class="frame"></div>
     <!-- <div class="overlay">
@@ -1021,6 +1058,17 @@
     document.querySelectorAll('.image-reveal').forEach((el, index) => {
         el.style.setProperty('--delay', `${index * 0.8}s`);
         observer.observe(el);
+    });
+</script>
+<script>
+    window.addEventListener('load', function () {
+        // Mantén el loader visible durante un tiempo fijo
+        setTimeout(function () {
+            // Oculta el loader
+            document.getElementById('loader').style.display = 'none';
+            // Muestra el contenido principal
+            document.getElementById('content').style.display = 'block';
+        }, 3000); // 3000 milisegundos = 3 segundos
     });
 </script>
 

@@ -43,7 +43,22 @@
     </div>
     <h4>Toca el sobre para abrir la invitación</h4>
     <div class="carta">
-        <a href="home.html" id="envb"><img class="cartaInside" src="envelope.PNG" alt="carta"></a>
+        <a href="index.html" id="envb"><img class="cartaInside" src="envelope.PNG" alt="carta"></a>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Obtener los parámetros de sobre.html
+                const params = new URLSearchParams(window.location.search);
+                const nombre = params.get("nombre");
+                const apellido = params.get("apellido");
+                const pases = params.get("pases");
+
+                // Verificar si hay datos antes de modificar el enlace
+                if (nombre && apellido && pases) {
+                    document.getElementById("envb").href = `index.html?nombre=${encodeURIComponent(nombre)}&apellido=${encodeURIComponent(apellido)}&pases=${encodeURIComponent(pases)}`;
+                }
+            });
+        </script>
         <img src="flor2.PNG" alt="flores" id="floresHome">
     </div>
     <script src="script.js"></script>
@@ -69,5 +84,42 @@
         <p class="footnumber">Invitaciones virtuales <br> <br>+51 967707229</p>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener información de la URL
+        const urlParams = window.location.search;
+
+        if (urlParams) {
+            // Quitar el '?' del inicio
+            const paramsString = urlParams.substring(1);
+
+            // Decodificar los parámetros de la URL
+            const decodedParams = decodeURIComponent(paramsString);
+
+            // Dividir por guiones
+            const parts = decodedParams.split('-');
+
+            // Si hay suficientes partes (nombre, apellido, número)
+            if (parts.length >= 3) {
+                const firstName = parts[0];
+                const lastName = parts[1];
+                const numPasses = parts[2];
+
+                // Actualizar el contenido de la página
+                document.getElementById('name').textContent = `${firstName} ${lastName}`;
+                document.getElementById('passnumbers').textContent = numPasses;
+
+                // Cambiar singular/plural según el número
+                if (numPasses === "1") {
+                    document.getElementById('passes-title').textContent = "Pase";
+                    document.getElementById('places-text').textContent = "Lugar";
+                } else {
+                    document.getElementById('passes-title').textContent = "Pases";
+                    document.getElementById('places-text').textContent = "Lugares";
+                }
+            }
+        }
+    });
+</script>
 
 </html>

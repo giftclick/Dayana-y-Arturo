@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+a[href^="tel"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+}
+
 body,
 html {
   height: 100%;

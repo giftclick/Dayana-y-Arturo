@@ -44,21 +44,12 @@
     <h4>Toca el sobre para abrir la invitación</h4>
     <div class="carta">
         <a href="index.html" id="envb"><img class="cartaInside" src="envelope.PNG" alt="carta"></a>
-
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                // Obtener los parámetros de sobre.html
-                const params = new URLSearchParams(window.location.search);
-                const nombre = params.get("nombre");
-                const apellido = params.get("apellido");
-                const pases = params.get("pases");
-
-                // Verificar si hay datos antes de modificar el enlace
-                if (nombre && apellido && pases) {
-                    document.getElementById("envb").href = `index.html?nombre=${encodeURIComponent(nombre)}&apellido=${encodeURIComponent(apellido)}&pases=${encodeURIComponent(pases)}`;
-                }
+                const params = window.location.search;
+                document.getElementById('envb').href = 'index.html' + params;
             });
-        </script>
+        </script>        
         <img src="flor2.PNG" alt="flores" id="floresHome">
     </div>
     <script src="script.js"></script>

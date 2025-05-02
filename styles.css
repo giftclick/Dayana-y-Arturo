@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-p[href^="tel"] {
+a[href^="tel"] {
   pointer-events: none;
   cursor: default;
   text-decoration: none;

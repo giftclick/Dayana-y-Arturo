@@ -101,7 +101,7 @@ footer>p {
     color: transparent;
     background-color: transparent;
     width: 350px;
-    height: 250px;
+    height: 230px;
     display: inline-block;
 }
 
@@ -1148,6 +1148,6 @@ a {
 
     #envb {
         width: 270px;
-        height: 196px;
+        height: 180px;
     }
 }

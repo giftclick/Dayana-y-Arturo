@@ -86,7 +86,6 @@ footer>p {
 }
 
 .footnumber {
-    padding-bottom: 45px;
     margin-top: -10px;
 }
 
@@ -108,7 +107,7 @@ footer>p {
 
 h4 {
     text-align: center;
-    color: #b27563;
+    color: #cc8e2f;
 }
 
 #envb:hover {
@@ -310,7 +309,7 @@ b2 {
     margin-top: 150px;
     margin-bottom: 60px;
     font-weight: 200;
-    color: #ffdac8;
+    color: #ffdab3;
     position: absolute;
     background-color: #00000069;
     top: 0;
